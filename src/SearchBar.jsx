@@ -10,7 +10,7 @@ function SearchBar({ makeSearch }) {
 	}
 
 	return (
-		<form onSubmit={onSubmitSearch}>
+		<form id="searchForm" onSubmit={onSubmitSearch}>
 			<input
 				type="text"
 				value={searchTerm}
