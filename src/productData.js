@@ -29,4 +29,21 @@ export let dummyData = [
 		image: "https://lostine.com/cdn/shop/files/MP_EDIT_LOSTINE_LIGHTING_HUGO_FLOOR_LAMP_NATURAL_WOOD_IVORY_LINEN_SHADE_CHAIR_VIGNETTE_014_1200x.jpg?v=1705935146",
 		price: 37.75,
 	},
+	{
+		id: 2,
+		name: "Water Bottle",
+		seller: "Foo Bar",
+		description:
+			"KEEPS YOUR WATER ULTRA COLD! BUY NOW BEFORE WE RUN OUT. BEST DEAL EVER CLICKBAIT CLICKBAIT CLICKBAIT.",
+		image: "https://takeyausa.com/cdn/shop/products/53030-Pickleball-CP-Straw-40-Rally-frontangle.png?v=1677798080",
+		price: 59.99,
+	},
+	{
+		id: 3,
+		name: "Better Water Bottle",
+		seller: "Fizz Buzz",
+		description: "That other water bottle stinks. This one is better.",
+		image: "https://cdni.llbean.net/is/image/wim/514955_54523_41?hei=1095&wid=950&resMode=sharp2&defaultImage=llbprod/514955_54523_41",
+		price: 60.0,
+	},
 ];
