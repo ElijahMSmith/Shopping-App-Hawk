@@ -1,19 +1,27 @@
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {
+	// state
 	const navigate = useNavigate();
+
+	// handler functions
+
+	// useEffects
 
 	return (
 		<div style={{ margin: 10 }}>
+			<h1>Header Bar Name</h1>
 			<button
-				style={{ fontSize: 24, marginRight: 15 }}
+				className="homeButton"
+				style={{ fontSize: "1.2em", marginRight: 15 }}
 				onClick={() => navigate("/")}
 			>
 				Homepage
 			</button>
-			-
+			
 			<button
-				style={{ fontSize: 24, marginLeft: 15 }}
+				className="productButton"
+				style={{ fontSize: "1.2em", marginRight: 15 }}
 				onClick={() => navigate("/product")}
 			>
 				Products

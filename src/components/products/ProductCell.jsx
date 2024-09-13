@@ -1,27 +1,32 @@
-import { useNavigate } from "react-router-dom";
+import styles from "./ProductCell.module.css";
+import { useContext } from "react";
+import { CartContext } from "../../utils/cart";
 
 function ProductCell({ product }) {
-	const navigate = useNavigate();
+	const { addProductToCart } = useContext(CartContext);
 
 	return (
-		<div
-			style={{ cursor: "pointer" }}
-			onClick={() => {
-				navigate(`/product/${product.id}`);
-			}}
-		>
+		<div>
 			<img
-				id="productImage"
+				className={styles.displayImage}
 				src={product.image}
 				alt="This would be a cool product :("
 			/>
-			<div id="productTextContainer">
-				<h2 id="productName">{product.name}</h2>
-				<div id="productSubtitleRow">
-					<h4 id="productSeller">{product.seller}</h4>-
-					<h4 id="productPrice">${product.price}</h4>
+			<div className={styles.container}>
+				<div style={{ display: "flex" }}>
+					<h2 className={styles.name}>{product.name}</h2>
+					<button
+						style={{ height: 30, width: 100, marginLeft: 20 }}
+						onClick={() => addProductToCart(product, 1)}
+					>
+						Add to Cart
+					</button>
 				</div>
-				<p id="productDescription">{product.description}</p>
+				<div className={styles.infoContainer}>
+					<h4 className={styles.seller}>{product.seller}</h4>-
+					<h4 className={styles.price}>${product.price}</h4>
+				</div>
+				<p className={styles.description}>{product.description}</p>
 			</div>
 		</div>
 	);

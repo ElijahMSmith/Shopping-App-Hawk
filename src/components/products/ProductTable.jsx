@@ -1,5 +1,5 @@
 import ProductCell from "./ProductCell";
-import "./ProductTable.css";
+import style from "./ProductTable.module.css";
 
 function ProductTable({ products, searchBy }) {
 	let filteredProducts = products.filter(
@@ -7,19 +7,25 @@ function ProductTable({ products, searchBy }) {
 	);
 
 	return (
-		<table style={{ width: "100%" }}>
-			<tbody>
-				{filteredProducts.map((product) => {
-					return (
-						<tr key={product.id}>
-							<td id="productsContainer">
-								<ProductCell product={product} />
-							</td>
-						</tr>
-					);
-				})}
-			</tbody>
-		</table>
+		<>
+			<h1 className={style.name}>All Products</h1>
+			<table style={{ width: "100%" }}>
+				<tbody>
+					{filteredProducts.map((product) => {
+						return (
+							<tr key={product.id}>
+								<td
+									id="productsContainer"
+									style={{ display: "flex", flexDirection: "column" }}
+								>
+									<ProductCell product={product} />
+								</td>
+							</tr>
+						);
+					})}
+				</tbody>
+			</table>
+		</>
 	);
 }
 
